@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # FORCES CodeSmash 2.0 – full-stack edition
 
 Coding-competition platform for the FORCES CSE community, P.E.S. College of Engineering, Chhatrapati Sambhajinagar.
@@ -159,3 +160,7 @@ client/src/
 - The round opens in **full screen**. If the participant leaves full screen, the questions are hidden until they return. Leaving full screen, switching tab/window, and the developer-tool shortcuts are recorded; copy, paste and right-click are blocked; reloading asks for confirmation. A web page cannot lock a computer completely: for a stricter lock use a kiosk browser (for example Safe Exam Browser) and a supervised lab.
 - In Admin -> Rounds you can set **Auto-submit after N violations** (0 = only record them). Violations show in Participants, Leaderboard and the answer viewer, and in the CSV export.
 - After submitting, a participant sees **only their score**. Qualified / not qualified, rank and the leaderboard are visible to the organiser only (Admin -> Leaderboard). The next round opens only for the participants you qualify, and they get a notification when it opens.
+=======
+# codesmash2.0
+coding competition , it includes coding question , code correction, problem solving
+>>>>>>> afaf5a98d67e85626092123310f546e8653b5559
