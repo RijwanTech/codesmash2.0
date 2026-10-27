@@ -56,20 +56,20 @@ export function Register() {
           <input value={form.name} onChange={set('name')} placeholder="e.g. Aarav Patil" required />
         </label>
         <label className="field">
-          <span>Roll number / PRN</span>
+          <span>Roll number</span>
           <input value={form.rollNo} onChange={set('rollNo')} placeholder="e.g. CSE2024-042" required />
         </label>
         <label className="field">
-          <span>Email (optional – results can also be emailed)</span>
+          <span>Email</span>
           <input type="email" value={form.email} onChange={set('email')} placeholder="you@example.com" />
         </label>
         <label className="field">
           <span>Year</span>
           <select value={form.year} onChange={set('year')}>
-            <option value="FE">First Year (FE)</option>
-            <option value="SE">Second Year (SE)</option>
-            <option value="TE">Third Year (TE)</option>
-            <option value="BE">Final Year (BE)</option>
+            <option value="FE">First Year (FY)</option>
+            <option value="SE">Second Year (SY)</option>
+            <option value="TE">Third Year (TY)</option>
+            <option value="BE">Final Year (B.Tech)</option>
           </select>
         </label>
         <label className="field">
@@ -114,8 +114,8 @@ export function Login() {
         <h2>Participant Login</h2>
         {error && <div className="alert alert-error">{error}</div>}
         <label className="field">
-          <span>Roll number / PRN</span>
-          <input value={rollNo} onChange={(e) => setRollNo(e.target.value)} placeholder="e.g. CSE2024-042" required />
+          <span>Email</span>
+          <input value={rollNo} onChange={(e) => setRollNo(e.target.value)} placeholder="you@example.com" required />
         </label>
         <label className="field">
           <span>Password</span>

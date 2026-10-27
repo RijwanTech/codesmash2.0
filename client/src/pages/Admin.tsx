@@ -587,7 +587,7 @@ function RegistrationTab() {
   const { data, error, loading, reload } = useApi(() => api<RegistrationInfo>('/admin/registration'));
   const [deadline, setDeadline] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
-  const [spot, setSpot] = useState({ name: '', rollNo: '', email: '', year: 'FE', password: '' });
+  const [spot, setSpot] = useState({ name: '', rollNo: '', email: '', year: 'FY', password: '' });
   const [created, setCreated] = useState<{ name: string; rollNo: string; password: string } | null>(null);
 
   if (loading && !data) return <Loading />;
@@ -613,7 +613,7 @@ function RegistrationTab() {
     try {
       const r = await api<{ student: { name: string; rollNo: string }; password: string }>('/admin/spot-register', { body: spot });
       setCreated({ name: r.student.name, rollNo: r.student.rollNo, password: r.password });
-      setSpot({ name: '', rollNo: '', email: '', year: 'FE', password: '' });
+      setSpot({ name: '', rollNo: '', email: '', year: 'FY', password: '' });
       notify('success', 'Participant added.');
     } catch (err) {
       notify('error', errMsg(err));
@@ -658,20 +658,20 @@ function RegistrationTab() {
         </label>
         <div className="grid grid-2">
           <label className="field">
-            <span>Roll number / PRN</span>
+            <span>Roll number</span>
             <input value={spot.rollNo} onChange={(e) => setSpot({ ...spot, rollNo: e.target.value })} required />
           </label>
           <label className="field">
             <span>Year</span>
             <select value={spot.year} onChange={(e) => setSpot({ ...spot, year: e.target.value })}>
-              {['FE', 'SE', 'TE', 'BE'].map((y) => (
+              {['FY', 'SY', 'TY', 'B.Tech'].map((y) => (
                 <option key={y}>{y}</option>
               ))}
             </select>
           </label>
         </div>
         <label className="field">
-          <span>Email (optional)</span>
+          <span>Email</span>
           <input type="email" value={spot.email} onChange={(e) => setSpot({ ...spot, email: e.target.value })} />
         </label>
         <label className="field">
